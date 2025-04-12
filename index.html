@@ -119,6 +119,58 @@
   </script>
 
 </body>
+<script>
+  const scriptURL = 'PASTE_YOUR_WEB_APP_URL_HERE';
+
+  // Client
+  const clientForm = document.getElementById('clientForm');
+  const clientInputs = clientForm.querySelectorAll('input');
+  const clientBtn = clientForm.querySelector('.btn');
+
+  clientBtn.addEventListener('click', () => {
+    const data = {
+      type: "client",
+      name: clientInputs[0].value,
+      email: clientInputs[1].value,
+      phone: clientInputs[2].value
+    };
+
+    fetch(scriptURL, {
+      method: 'POST',
+      body: JSON.stringify(data)
+    })
+    .then(() => alert("Client Registered Successfully!"))
+    .catch(() => alert("Error saving client data"));
+  });
+
+  // Worker
+  const workerForm = document.getElementById('workerForm');
+  const workerInputs = workerForm.querySelectorAll('input');
+  const workerBtn = workerForm.querySelector('.btn');
+
+  workerBtn.addEventListener('click', () => {
+    const data = {
+      type: "worker",
+      firstName: workerInputs[0].value,
+      lastName: workerInputs[1].value,
+      phone: workerInputs[2].value,
+      aadhar: workerInputs[3].value,
+      email: workerInputs[4].value,
+      address: workerInputs[5].value
+    };
+
+    fetch(scriptURL, {
+      method: 'POST',
+      body: JSON.stringify(data)
+    })
+    .then(() => alert("Worker Registered Successfully!"))
+    .catch(() => alert("Error saving worker data"));
+  });
+</script>
+ 
+
+
+</body>
  
 
 
