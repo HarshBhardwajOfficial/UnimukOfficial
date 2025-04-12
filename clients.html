@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Unimuk - Clients</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: #0f0220;
+      color: white;
+    }
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 2rem;
+      background-color: #0f0220;
+    }
+    .logo {
+      font-weight: bold;
+      font-size: 1.5rem;
+      color: white;
+    }
+    nav a {
+      color: white;
+      margin: 0 1rem;
+      text-decoration: none;
+    }
+    .search-btn {
+      background: white;
+      color: #0f0220;
+      padding: 8px 15px;
+      border-radius: 20px;
+      border: none;
+    }
+    .hero {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 4rem 6rem;
+    }
+    .hero-left {
+      max-width: 50%;
+    }
+    .hero-left h1 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+    }
+    .hero-left ul {
+      list-style: none;
+      padding-left: 0;
+    }
+    .hero-left ul li::before {
+      content: ". ";
+      color: #c0aaff;
+    }
+    .hero-left button {
+      margin-top: 2rem;
+      padding: 10px 20px;
+      font-size: 1rem;
+      border: none;
+      background: white;
+      color: #0f0220;
+      border-radius: 25px;
+      cursor: pointer;
+    }
+    .hero-right img {
+      max-width: 400px;
+      border-radius: 25px;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="logo">UniMuk</div>
+    <nav>
+      <a href="#">Workers</a>
+      <a href="#">Pricing</a>
+      <a href="#">About</a>
+    </nav>
+    <button class="search-btn">Search →</button>
+  </header>
+
+  <section class="hero">
+    <div class="hero-left">
+      <button style="background:#6542f4; color:white; border:none; padding:8px 15px; border-radius:10px;">#UniMuk</button>
+      <h1>Get your Workers Within 5 Minutes</h1>
+      <ul>
+        <li>Verified Workers</li>
+        <li>Your Locality</li>
+        <li>Negotiable</li>
+      </ul>
+      <button onclick="window.location.href='index.html'">Start Finding →</button>
+    </div>
+    <div class="hero-right">
+      <img src="Screenshot 2025-04-12 175150.png" alt="Typing on Laptop" />
+    </div>
+  </section>
+
+</body>
+</html>
