@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Unimuk App</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', sans-serif;
+    }
+    body {
+      background: #f0f4f7;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+    }
+    h1 {
+      margin-bottom: 20px;
+      font-size: 3rem;
+      color: #333;
+    }
+    .choice-box {
+      display: flex;
+      gap: 20px;
+    }
+    .btn {
+      padding: 15px 30px;
+      font-size: 1.2rem;
+      background-color: #007BFF;
+      color: white;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+    .btn:hover {
+      background-color: #0056b3;
+    }
+    .form-box {
+      display: none;
+      flex-direction: column;
+      margin-top: 30px;
+      width: 300px;
+      background: white;
+      padding: 25px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    .form-box input {
+      margin: 10px 0;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+    }
+    .form-box button {
+      margin-top: 15px;
+    }
+    .back-btn {
+      margin-top: 20px;
+      font-size: 0.9rem;
+      color: #007BFF;
+      background: none;
+      border: none;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Welcome to Unimuk</h1>
+  <div class="choice-box" id="choiceBox">
+    <button class="btn" onclick="showForm('client')">I'm a Client</button>
+    <button class="btn" onclick="showForm('worker')">I'm a Worker</button>
+  </div>
+
+  <!-- Client Form -->
+ <div class="form-box" id="clientForm">
+  <h2>Client Registration</h2>
+  <input type="text" placeholder="Full Name" required>
+  <input type="email" placeholder="Email ID" required>
+  <input type="text" placeholder="Mobile Number" required>
+  <button class="btn">Register</button>
+  <button class="back-btn" onclick="goBack()">← Back</button>
+</div>
+
+
+  <!-- Worker Form -->
+  <div class="form-box" id="workerForm">
+    <h2>Worker Registration</h2>
+    <input type="text" placeholder="First Name" required>
+    <input type="text" placeholder="Last Name" required>
+    <input type="text" placeholder="Mobile Number" required>
+    <input type="text" placeholder="Aadhar Card Number" required>
+    <input type="email" placeholder="Email ID" required>
+    <input type="text" placeholder="Address" required>
+    <button class="btn">Register</button>
+    <button class="back-btn" onclick="goBack()">← Back</button>
+  </div>
+
+  <script>
+    function showForm(type) {
+      document.getElementById("choiceBox").style.display = "none";
+      if (type === 'client') {
+        document.getElementById("clientForm").style.display = "flex";
+      } else {
+        document.getElementById("workerForm").style.display = "flex";
+      }
+    }
+
+    function goBack() {
+      document.getElementById("clientForm").style.display = "none";
+      document.getElementById("workerForm").style.display = "none";
+      document.getElementById("choiceBox").style.display = "flex";
+    }
+  </script>
+
+</body>
+ 
+
+
